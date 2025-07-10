@@ -20,6 +20,10 @@ public class Calculadora extends Object {
     }
 
     public void dividir(double valor) {
-        total = total / valor;
+        if (valor == 0) {
+            throw new ArithmeticException("División por cero");
+        } else {
+            total = total / valor;
+        }
     }
 }
