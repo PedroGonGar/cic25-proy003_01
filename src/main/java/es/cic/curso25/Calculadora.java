@@ -14,4 +14,12 @@ public class Calculadora extends Object {
     public void restar(double valor) {
         total = total - valor;
     }
+
+    public void multiplicar(double valor) {
+        total = total * valor;
+    }
+
+    public void dividir(double valor) {
+        total = total / valor;
+    }
 }

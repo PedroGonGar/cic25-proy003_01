@@ -43,4 +43,42 @@ public class CalculadoraTest {
 
         assertEquals(5.0, valorActual, 0.000001);
     }
+
+    @Test
+    public void testMultiplicar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+
+        // Ejecuto
+        cut.sumar(10.0);
+        cut.multiplicar(3.0);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(30.0, valorActual, 0.000001);
+
+        cut.multiplicar(2.0);
+        valorActual = cut.getTotal();
+
+        assertEquals(60.0, valorActual, 0.000001);
+    }
+
+    @Test
+    public void testDividir() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+
+        // Ejecuto
+        cut.sumar(10.0);
+        cut.dividir(2.0);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(5.0, valorActual, 0.000001);
+
+        cut.dividir(2.0);
+        valorActual = cut.getTotal();
+
+        assertEquals(2.5, valorActual, 0.000001);
+    }
 }
