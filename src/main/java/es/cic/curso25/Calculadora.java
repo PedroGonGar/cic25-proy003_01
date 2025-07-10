@@ -26,4 +26,8 @@ public class Calculadora extends Object {
             total = total / valor;
         }
     }
+
+    public void limpiar(){
+        total = 0;
+    }
 }

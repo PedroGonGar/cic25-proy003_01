@@ -91,4 +91,14 @@ public class CalculadoraTest {
         assertThrows(ArithmeticException.class,
         () -> cut.dividir(0));
     }
+
+    @Test
+    void testLimpiar() {
+        Calculadora cut = new Calculadora();
+        cut.sumar(10);
+        cut.limpiar();
+
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
+    }
 }

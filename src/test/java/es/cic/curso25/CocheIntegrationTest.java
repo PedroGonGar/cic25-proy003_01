@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-public class CocheTest {
+public class CocheIntegrationTest {
 
     private Coche cut;
 
@@ -30,7 +30,7 @@ public class CocheTest {
         cut.frenar(34);
         int velocidadFinal = cut.frenar(23);
 
-        assertEquals(-57, velocidadFinal);
+        assertEquals(11, velocidadFinal);
     }
 
     // @Disabled
